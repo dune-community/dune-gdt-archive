@@ -313,8 +313,8 @@ private:
     for (size_t ii = 0; ii < range.vector().size(); ++ii)
       range.vector().set_entry(ii, infinity);
     // walk the grid
-    const auto entity_it_end = grid_view_.template end< 0 >();
-    for (auto entity_it = grid_view_.template begin< 0 >();
+    const auto entity_it_end = grid_view_.template end< 0, InteriorBorder_Partition >();
+    for (auto entity_it = grid_view_.template begin< 0, InteriorBorder_Partition >();
          entity_it != entity_it_end;
          ++entity_it) {
       const auto& entity = *entity_it;
